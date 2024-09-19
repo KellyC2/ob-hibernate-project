@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "c51c6784-f305-4a70-9afa-947b8958882c",
+		"name": "HibernateProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38434200"
+	},
+	"item": [
+		{
+			"name": "/api/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/api/billingInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/billingInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"billingInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/billingInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"street\": \"ELM street\",\r\n        \"postalCode\": \"266398\",\r\n        \"city\": \"Quesadilla\",\r\n        \"country\": \"Transilvania\",\r\n        \"iban\": \"789456121\",\r\n        \"user\": {\r\n            \"id\": 1,\r\n            \"firstName\": \"Fabiola\",\r\n            \"lastName\": \"Perez\",\r\n            \"dni\": \"89632541\",\r\n            \"birthDate\": \"1970-05-30\",\r\n            \"billingInfo\": {\r\n                \"id\": 1,\r\n                \"street\": \"ELM street\",\r\n                \"postalCode\": \"266398\",\r\n                \"city\": \"Quesadilla\",\r\n                \"country\": \"Transilvania\",\r\n                \"iban\": \"789456121\"\r\n            },\r\n            \"tasks\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"title\": \"Titulo1\",\r\n                    \"description\": \"Descripciòn1\",\r\n                    \"deliveryDate\": \"2024-09-19\",\r\n                    \"tags\": [\r\n                        {\r\n                            \"id\": 1,\r\n                            \"name\": \"hib\",\r\n                            \"color\": \"BLUE\"\r\n                        }\r\n                    ],\r\n                    \"finished\": true\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"title\": \"Titulo2\",\r\n                    \"description\": \"Descripciòn2\",\r\n                    \"deliveryDate\": \"2024-09-19\",\r\n                    \"tags\": [\r\n                        {\r\n                            \"id\": 2,\r\n                            \"name\": \"verde\",\r\n                            \"color\": \"GREEN\"\r\n                        },\r\n                        {\r\n                            \"id\": 1,\r\n                            \"name\": \"hib\",\r\n                            \"color\": \"BLUE\"\r\n                        }\r\n                    ],\r\n                    \"finished\": true\r\n                }\r\n            ],\r\n            \"active\": true\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/billingInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"billingInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/billingInfo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"street\": \"Street modificado desde postman\",\r\n    \"postalCode\": \"266396\",\r\n    \"city\": \"PostmanCity\",\r\n    \"country\": \"Narnia\",\r\n    \"iban\": \"756456121\",\r\n    \"user\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/billingInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"billingInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": null,\r\n        \"title\": \"Tarea desde postman\",\r\n        \"description\": \"Insertando desde postman\",\r\n        \"deliveryDate\": \"2024-09-19\",        \r\n        \"finished\": true\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/tags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/tags",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": null,\r\n        \"name\": \"amarillo\",\r\n        \"color\": \"YELLOW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/tags",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"name\": \"postamColor\",\r\n    \"color\": \"YELLOW\",\r\n    \"tasks\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
